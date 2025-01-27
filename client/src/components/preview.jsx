@@ -16,14 +16,6 @@ const Preview = () => {
     // setPreview(e.target.value)
   }
 
- 
-  const ListItems = ()=>{
-    list.map((items)=>{
-      const className = ` ${items==='People' ? "bg-gray-300 px-3 py-2 hover:text-yellow-200 text-md text-gray-600":"hover:text-yellow-200 text-md text-gray-600"}`
-      return <li className={className}><a>{items}</a></li>
-    })
-  }
-
   const handleChange = (e)=>{
     e.preventDefault()
     console.log(e.target.value)
@@ -31,10 +23,15 @@ const Preview = () => {
   }
 
   return (
-    <div className="bg-white flex flex-col space-y-10 items-center mt-20">
+    <div className="bg-white flex flex-col overflow-hidden items-center mt-20 w-full max-w-5xl px-4">
         <h1 className="text-gray-600 text-4xl sm:text-5xl font-bold " >Stunning Quality</h1>
-        <ul className="flex justify-center space-x-10 text-md font-semibold text-gray-500">
-           <ListItems  />
+        <ul className="flex justify-center  text-md overflow-x-scroll hide-scrollbars font-semibold text-gray-600 w-full px-4 max-w-full">
+          {
+            list.map((items)=>{
+              const className = `mr-10 ${items==='People' ? "bg-gray-300 px-3 py-2 hover:text-yellow-200":"hover:text-yellow-200 py-2"}`
+              return <li className={className}><a>{items}</a></li>
+            })
+          }
         </ul>
         <div className="relative">
            <img style={{clipPath:`inset(0 ${100.5 - rangeValue}% 0 0 )`}} className="h-96" src={images.littleboy} />

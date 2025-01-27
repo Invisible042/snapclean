@@ -6,14 +6,21 @@ import profile_img_2 from "./profile_img_2.png"
 import profile_img_3 from "./profile_img_3.png"
 import yellow_background from "./yellow_background.jpg"
 import little_boy_bgremoved from './little_boy_bgremoved.png'
+import linkedin from './linkedin.png'
+import youtube from './youtube.png'
 
 
 const images = {
     littleboy,
-    facebook_icon,
-    google_plus_icon,
     yellow_background,
-    little_boy_bgremoved
+    little_boy_bgremoved,
+    social_icons : [
+        linkedin,
+        youtube,
+        google_plus_icon,
+        facebook_icon
+    ]
+
 }
 
 const testimonialInfo = [
@@ -24,7 +31,7 @@ const testimonialInfo = [
         comment:"“We are impressed by the AI and think it's the best choice on the market.”",
         profile:profile_img_1
     },
-    {
+     {
         name:"marc colen",
         work:"CEO",
         logo:".img",

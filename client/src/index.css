@@ -11,11 +11,9 @@
     padding:0;
     font-family:'Poppins'
 }
-
 html{
-    width:cal(100vw - 1%);
+    max-width:100%;
 }
-
 input[type='range']{
     appearance:none;
     background-color: blue;

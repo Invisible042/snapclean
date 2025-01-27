@@ -14,5 +14,8 @@ app.use(express.urlencoded())
 app.use('/', signup_route)
 app.use('/',login_route)
 
-connectDb()
-app.listen(port, ()=>console.log(`server running on http://localhost:${port}`))
+connectDb().then(()=>{
+    app.listen(port, ()=>console.log(`server running on http://localhost:${port}`))
+}).catch((error)=>{
+    console.log("could not connect to database")
+})

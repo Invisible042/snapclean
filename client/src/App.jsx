@@ -12,7 +12,7 @@ import Login from './pages/login.jsx'
 const App = () => { 
 
   return(
-    <div>
+    <div className="w-full">
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />

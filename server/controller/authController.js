@@ -4,14 +4,26 @@ import  user from '../models/user.js'
 
 
 const signupAuth =async (req, res)=>{
+    console.log("hello")
     const {username, password, email} =await req.body
-    await user.findOne({email, username}) ? res.send("user already exist") : user.create({email, password, username})
-    res.status(200).send("account created successfully verify your email address")
+    const existingUser = await user.find({email, username})
+    if(existingUser){
+        res.status(400).send("user already exist")
+    }
+    else{
+        await user.create({username, email, password})
+        res.status(200).send("user created successfully")
+    }
 }
 
 const loginAuth = async (req, res) =>{
     const {email, password} = await req.body
-    await user.find({email, password}) ? res.send("Login successfully") : res.send("incorrect email or password")
-}
+    const isUser = await user.find({email, password})
+    console.log(req.body)
 
+    if(isUser){
+      res.status(200).send("logged in successfully")
+    }
+    res.status(400).send("user does not exist")
+}
 export {signupAuth, loginAuth}

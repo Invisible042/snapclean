@@ -1,13 +1,17 @@
 import React from 'react'
 
 const Login = () => {
+
+  const handleSubmit = (e) =>{
+
+  }
+
+
   return (
-    <div>
-        /* From Uiverse.io by Shamaun-Nabi */ 
-<section>
-  <div
-    class="flex bg-white items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-8"
-  >
+    <div> 
+  <section>
+   <div
+    class="flex bg-white items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-8">
     <div class="xl:mx-auto xl:w-full shadow-md p-4 xl:max-w-sm 2xl:max-w-md">
       <div class="mb-2 flex justify-center"></div>
       <h2 class="text-center text-2xl font-bold leading-tight text-black">
@@ -16,7 +20,7 @@ const Login = () => {
       <p class="mt-2 text-center text-sm text-gray-600">
         Don't have an account? Create a free account
       </p>
-      <form class="mt-8" method="POST" action="#">
+      <form class="mt-8" method="POST" action="http://localhost:3001/api/auth/login">
         <div class="space-y-5">
           <div>
             <label class="text-base font-medium text-gray-900">
@@ -24,8 +28,10 @@ const Login = () => {
             </label>
             <div class="mt-2">
               <input
+                name="email"
                 placeholder="Email"
                 type="email"
+                required="true"
                 class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
               />
             </div>
@@ -45,8 +51,10 @@ const Login = () => {
             </div>
             <div class="mt-2">
               <input
+                name="password"
                 placeholder="Password"
                 type="password"
+                required="true"
                 class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
               />
             </div>
@@ -54,7 +62,7 @@ const Login = () => {
           <div>
             <button
               class=" inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
-              type="button"
+              type="submit"
             >
               Get started
             </button>
