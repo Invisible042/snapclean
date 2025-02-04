@@ -20,13 +20,13 @@ const Signup = () => {
                 <label className="block mb-2 text-sm font-medium text-gray-900">
                   Password
                 </label>
-                <input name="password1" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="••••••••" id="password" type="password"/>
+                <input name="password" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="••••••••" id="password" type="password"/>
               </div>
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900">
                   Confirm password
                 </label>
-                <input name="password2" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="••••••••" id="confirmPassword" type="password"/>
+                <input name="confirmPassword" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" placeholder="••••••••" id="confirmPassword" type="password"/>
               </div>
               <div className="flex items-start">
                 <div className="flex items-center h-5">

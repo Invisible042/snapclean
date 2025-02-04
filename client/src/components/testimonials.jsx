@@ -5,7 +5,7 @@ const Testimonials = () => {
  return (
   <div className="bg-gray-50 flex flex-col items-center">
     <h1 className="text-center my-7 text-3xl font-bold">They love us. You will too</h1>
-    <div className="flex space-x-7 mx-10 w-full overflow-x-scroll">
+    <div className="flex justify-center space-x-7 mx-10 w-full overflow-x-scroll">
         {testimonialInfo.map((user)=>{
           const {name, work, profile, comment, logo} = user
           return (

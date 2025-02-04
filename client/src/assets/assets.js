@@ -5,20 +5,22 @@ import profile_img_1 from "./profile_img_1.png"
 import profile_img_2 from "./profile_img_2.png"
 import profile_img_3 from "./profile_img_3.png"
 import yellow_background from "./yellow_background.jpg"
-import little_boy_bgremoved from './little_boy_bgremoved.png'
+import littleboyBgremoved from './littleboyBgremoved.png'
 import linkedin from './linkedin.png'
 import youtube from './youtube.png'
+import logo from './logo.png'
 
 
 const images = {
     littleboy,
     yellow_background,
-    little_boy_bgremoved,
+    littleboyBgremoved,
+    logo,
     social_icons : [
         linkedin,
         youtube,
         google_plus_icon,
-        facebook_icon
+        facebook_icon,
     ]
 
 }

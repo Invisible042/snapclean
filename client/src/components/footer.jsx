@@ -22,7 +22,7 @@ import {images} from "../assets/assets"
       </div>
       <div className="text-white flex flex-col-reverse items-center justify-between font-bold text-sm sm:flex-row md:flex-row">
         <p>© snapclean, a technova brand</p>
-        <ul className="flex space-y-3 text-sm flex-col items-center sm:flex-row md:flex-row lg:flex-row">
+        <ul className="flex space-y-3 text-sm flex-col items-center sm:flex-row md:flex-row lg:flex-row lg:items-center lg:space-y-0 lg:space-x-3">
           <li><a>Terms of Service</a></li>
           <li><a>General Terms and Conditions</a></li>
           <li><a>Privacy Policy</a></li>

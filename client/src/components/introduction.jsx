@@ -10,12 +10,12 @@ const Introduction = () => {
                 <img className="bg-contain w-[370px] h-[200px] mx-auto" src={images.littleboy} alt="littleboy-img"/>
             </div>
             <div className="text-center w-full">
-               <h1 className="font-bold text-6xl text-gray-700">Remove image background</h1>
-               <p className="my-5 text-xl font-semibold text-gray-600">100% Automatically and <span className=" bg-cover bg-center">free</span></p>
+               <h1 className="font-bold text-4xl text-gray-700 sm:text-6xl">Remove image background</h1>
+               <p className="my-5 text-xl font-semibold text-gray-600">100% Automatically and <span className=" bg-cover bg-center block w-10 mx-auto bg-yellow-200">free</span></p>
             </div>
         </div>
         <div className="w-full lg:mr-36">
-          <div className=" rounded-3xl mt-10 sm:border-2 text-center sm:shadow-2xl sm:shadow-gray-400 sm:pt-36 max-w-md mx-auto min-h-[360px]">
+          <div className="bg-white rounded-3xl mt-10 sm:border-2 text-center sm:shadow-2xl sm:shadow-gray-400 sm:pt-36 max-w-md mx-auto min-h-[360px]">
             <label for="upload-img" > <span className="bg-blue-600 shadow-sm shadow-gray-500 w-full max-w-64 rounded-full mb-4 block sm:px-12 py-[12px] sm:mb-7 text-2xl sm:text-xl text-white font-semibold mx-auto cursor-pointer">Upload image</span>
             <input className="hidden" type="file" name="upload-file" id="upload-img" />
             </label>
