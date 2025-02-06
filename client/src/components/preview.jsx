@@ -5,7 +5,7 @@ import {images} from '../assets/assets.js'
 const Preview = () => {
   const [previewImage, setPreviewImage] = useState('littleboy')
   const [previewImageRm, setPreviewImageRm] = useState('littleboyBgremoved')
-  const [rangeValue, setRangeValue] = useState(50)
+  const [rangeValue, setRangeValue] = useState(53)
 
   const previewList = {people:'littleboy',products:'watch', animals:'dog', cars:'cars', graphics:'graphics'}
 
@@ -30,9 +30,9 @@ const Preview = () => {
           <button className=" px-4 py-2">Graphics</button>
         </div>
         <div className="relative">
-           <img style={{clipPath:`inset(0 ${100.5 - rangeValue}% 0 0 )`}} className="max-h-[500px]" src={images[previewImage]} alt="img here" />
+           <img style={{clipPath:`inset(0 ${100.1 - rangeValue}% 0 0 )`}} className="max-h-[500px]" src={images[previewImage]} alt="img here" />
            <img style={{clipPath:`inset(0 0 0 ${rangeValue}%)`}}  src={images[previewImageRm]} className="max-h-[500px] absolute top-0" alt='img here' />
-           <input onChange={handleChange} type="range" className="slider absolute top-1/2 left-48"  min="0" max="100"/>
+           <input onChange={handleChange} type="range" className="slider absolute top-1/2 left-1/2"  min="0" max="100"/>
           </div>
         <p>See more samples </p>
     </div>

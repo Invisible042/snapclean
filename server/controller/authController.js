@@ -28,4 +28,12 @@ const loginAuth = async (req, res) =>{
         res.status(400).send("user does not exist")
     }
 }
-export {signupAuth, loginAuth}
+
+const removeBgAuth = async(req, res) =>{
+    const {file} = req.body
+    console.log(file)
+}
+
+
+
+export {signupAuth, loginAuth, removeBgAuth}

@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
-import Upload from '../pages/upload'
+import Upload from '../pages/removeBg.jsx'
 import {Link} from "react-router-dom"
 import {images} from '../assets/assets.js'
 
@@ -22,11 +22,11 @@ const Header = (components) => {
   }
 
   return (
-    <div className="border-gray-100 bg-white border-y-2 flex space-x-6 justify-between py-6 mx-7 text-center my-auto">
+    <div className="border-gray-100 bg-white border-y-2 flex space-x-6 justify-between py-6 px-7 text-center my-auto  w-full">
       <Link to="/" className="my-auto">  
       <img src={images.logo} className="w-8 inline-block mb-2" alt="logo-img" /><span className="bg-gradient-to-r from-yellow-300 to-purple-400 text-transparent bg-clip-text text-3xl font-bold my-auto inline-block">snapclean</span></Link>
       <ul className="my-auto hidden space-x-6 lg:flex text-xl text-gray-500 font-bold">
-        <li className="hover:text-red-400"><Link to="/upload" >Remove Background</Link></li>
+        <li className="hover:text-red-400"><Link to="/removeBg" >Remove Background</Link></li>
         <li className="hover:text-red-400"><Link to="/Features">Features</Link></li>
         <li className="hover:text-red-400" ><Link to="/forbusiness" >For business</Link></li>
         <li className="hover:text-red-400" ><Link to="/pricing" >Pricing</Link></li>
