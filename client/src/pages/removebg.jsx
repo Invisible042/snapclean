@@ -9,16 +9,18 @@ const Upload = () => {
     const handleChange =async (e)=>{
         e.preventDefault()
         const file = e.target.files[0]
-        console.log(file)
-        console.log("hello;")
         if(!file) return
         setProcessImage(file)
-        const formData = new formData()
+        const formData = new FormData()
         formData.append("file", file)
 
         try {
 
-            const response =await axios.post('http://localhost:3001/removeBg', formData)
+            const response =await axios.post('http://localhost:3001/removeBg', formData, {
+                header:{
+                    'Content-type':'multipart/form-data'
+                }
+            })
         }
         catch(err){
             console.log("could not process")

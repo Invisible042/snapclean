@@ -10,7 +10,7 @@ const Introduction = () => {
                 <img className="bg-contain w-[370px] h-[200px] mx-auto" src={images.littleboy} alt="littleboy-img"/>
             </div>
             <div className="text-center w-full">
-               <h1 className="font-bold text-4xl text-gray-700 sm:text-6xl">Remove image background</h1>
+               <h1 className="font-bold text-4xl text-gray-700 sm:text-5xl">Remove image background</h1>
                <p className="my-5 text-xl font-semibold text-gray-600">100% Automatically and <span className=" bg-cover bg-center block w-10 mx-auto bg-yellow-200">free</span></p>
             </div>
         </div>

@@ -32,7 +32,7 @@ const Preview = () => {
         <div className="relative">
            <img style={{clipPath:`inset(0 ${100.1 - rangeValue}% 0 0 )`}} className="max-h-[500px]" src={images[previewImage]} alt="img here" />
            <img style={{clipPath:`inset(0 0 0 ${rangeValue}%)`}}  src={images[previewImageRm]} className="max-h-[500px] absolute top-0" alt='img here' />
-           <input onChange={handleChange} type="range" className="slider absolute top-1/2 left-1/2"  min="0" max="100"/>
+           <input onChange={handleChange} type="range" className="slider absolute top-1/2 left-1/2"step="0.01"  min="0" max="100"/>
           </div>
         <p>See more samples </p>
     </div>

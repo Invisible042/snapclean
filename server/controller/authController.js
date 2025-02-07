@@ -3,6 +3,7 @@ import  user from '../models/user.js'
 // import bcrypt from 'bcrypt'
 
 
+
 const signupAuth =async (req, res)=>{
     console.log("hello")
     const {username, password} =await req.body
@@ -30,8 +31,9 @@ const loginAuth = async (req, res) =>{
 }
 
 const removeBgAuth = async(req, res) =>{
-    const {file} = req.body
-    console.log(file)
+    console.log(req.file)
+    console.log('hello working')
+
 }
 
 
