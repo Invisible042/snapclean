@@ -3,7 +3,7 @@ import {images} from "../assets/assets"
 
 const Introduction = () => {
   return (
-    <div className="w-full bg-gradient-to-r from-green-50 to-pink-50" style={{minHeight:" calc(-72px + 100vh)"}}>
+    <div className="w-full bg-gradient-to-r from-green-50 to-pink-50" style={{minHeight:" calc(-73px + 100vh)"}}>
       <div className="flex flex-col items-center space-y-6 p-3 sm-p-16 md:flex-col lg:flex-row lg:justify-center  ">
         <div className="w-full flex flex-col justify-center max-w-x rounded-lg  md:flex-row lg:flex-col lg:ml-36"> 
             <div className="h-60 rounded-lg w-full max-w-5xl">
