@@ -19,7 +19,7 @@ const Introduction = () => {
             <label for="upload-img" > <span className="bg-blue-600 shadow-sm shadow-gray-500 w-full max-w-64 rounded-full mb-4 block sm:px-11 py-[12px] sm:mb-7 text-2xl sm:text-xl text-white font-semibold mx-auto cursor-pointer">Upload image</span>
             <input className="hidden" type="file" name="upload-file" id="upload-img" />
             </label>
-            <span className="block text-gray-600 font-bold text-lg" >Or  drop a file</span>
+            <span className="block text-gray-600 font-bold text-lg" >Or  drop a file </span>
             <span className="block text-gray-400 sm:block">paste img or Url</span>
           </div>
         </div>
