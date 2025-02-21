@@ -1,5 +1,8 @@
 import express from 'express'
 import  user from '../models/user.js'
+import childprocess from 'child_process'
+import {exec} from 'child_process'
+import fs from 'fs'
 // import bcrypt from 'bcrypt'
 
 
@@ -31,10 +34,19 @@ const loginAuth = async (req, res) =>{
 }
 
 const removeBgAuth = async(req, res) =>{
-    console.log(req.file)
-    console.log('hello working')
+    exec(`python removebg.py ${input} ${output}`, (error)=>{
+    if(error){
+        res.status(400).send("error loading script")
+    }
+    fs.sendFile("output", ()=>{
+        fs.unlinkSync(inputImagePath);
+        fs.unlinkSync(outputImagePath);
+    })
+   })
 
 }
+console.log(childprocess);
+console.log(exec);
 
 
 
