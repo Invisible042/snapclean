@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
-import Upload from '../pages/removeBg.jsx'
+import Upload from '../pages/removebg.jsx'
 import {Link} from "react-router-dom"
 import {images} from '../assets/assets.js'
 

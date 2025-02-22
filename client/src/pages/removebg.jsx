@@ -21,6 +21,7 @@ const Upload = () => {
                     'Content-type':'multipart/form-data'
                 }
             })
+            setProcessImage(res.body)
         }
         catch(err){
             console.log("could not process")
