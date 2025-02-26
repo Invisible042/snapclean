@@ -8,20 +8,22 @@ const Upload = () => {
     // Handle file selection
     const handleChange =async (e)=>{
         e.preventDefault()
-        const file = e.target.files[0]
+        const imageUrl = e.target.files[0]
         if(!file) return
-        setProcessImage(file)
+        setProcessImage(imageUrl)
         const formData = new FormData()
         formData.append("file", file)
 
         try {
 
             const response =await axios.post('http://localhost:3001/removeBg', formData, {
-                header:{
+                headers:{
                     'Content-type':'multipart/form-data'
-                }
+                },
+                responseType:'blob'
             })
-            setProcessImage(res.body)
+            const processedImageUrl = URL.createObjectURL(response.data)
+            setProcessImage(processedImageUrl)
         }
         catch(err){
             console.log("could not process")
@@ -60,7 +62,7 @@ const Upload = () => {
                 processImage &&
                 <div className="mt-10">
                     <h1 className="font-bold text-2xl">preview</h1>
-                    <img src={URL.createObjectURL(processImage)} className="mt-2 rounded-lg max-w-full" />
+                    <img src={processImage} className="mt-2 rounded-lg max-w-full" />
                 </div>
             }
 
